@@ -8,11 +8,14 @@
 }
 body{
     font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
 }
+
 .container{
     width: 1170px;
     padding: 0px 25px;
     margin: 0 auto;
+    margin-bottom: 80px;
 }
 a{
     text-decoration: none;
@@ -89,4 +92,73 @@ header{
 }
 .banner-image{
     width: 100%;
+}
+
+/* LOGOS CSS */
+.logo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+.container > .logo{
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0px;
+}
+
+/* POPULAR COLLECTION SECTION CSS */
+.popular-collection h2{
+    text-align: center;
+    margin-bottom: 50px;
+    color: #3a3a3a;
+    font-size: 28px;
+    font-weight: 600;
+}
+.collection{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+}
+.collection-card{
+    box-shadow: 2.5px 4.33px 30px 0 rgb(64 87 191 / 20%);
+    padding: 20px;
+    border-radius: 7px;
+}
+.product-image{
+    margin-bottom: 20px;
+}
+.product-image img{
+    width:100%;
+}
+.product-name{
+    font-size:28px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.product-price{
+    font-size: 25px;
+    font-weight: 500;
+    color: #3a3a3a;
+    margin-bottom: 3px;
+}
+.product-rating{
+    margin-bottom: 10px;
+}
+.product-info .fa-star, .fa-star-half-alt{
+    font-size: 10px;
+    color: orange;
+}
+.product-info span{
+    display: inline-block;
+    color: #5E6366;
+    font-weight: 500;
+    font-size: 14px;
+    margin-left: 5px;
+}
+.product-info p{
+    color: #787885;
+    font-weight: 600;
+    font-size: 14px;
 }
