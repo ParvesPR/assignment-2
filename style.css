@@ -56,6 +56,21 @@ a{
     font-size:16px;
     color: #3a3a3a;
     font-weight: 600;
+    position: relative;
+    padding-bottom: 6px;
+}
+.navBar ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    border-bottom: 2px solid #e02c6d;
+    transition: .4s ease-in-out;
+}
+
+.navBar ul li a:hover::after {
+    width: 100%;
 }
 
 /* BANNER SECTION CSS */
@@ -149,12 +164,22 @@ a{
     box-shadow: 2.5px 4.33px 30px 0 rgb(64 87 191 / 15%);
     padding: 20px;
     border-radius: 7px;
+    transition: transform .3s;
+}
+.collection-card:hover{
+    transform: translateY(-12px);
 }
 .product-image{
     margin-bottom: 20px;
+    overflow: hidden;
 }
 .product-image img{
     width:100%;
+    overflow: hidden;
+    transition: .5s;
+}
+.product-image:hover img {
+    transform: translatey(-5px) scale(1.03);
 }
 .product-name{
     font-size:28px;
