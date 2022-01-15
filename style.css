@@ -39,6 +39,12 @@ a{
     font-size: 25px;
     font-weight: 600;
 }
+#nav-toggler{
+    display: none;
+}
+.nav-toggler-icon{
+    display: none;
+}
 .navBar ul{
     display: flex;
 }
@@ -74,6 +80,9 @@ a{
     font-weight: 600;
     color: #3a3a3a;
     margin-bottom: 20px;
+}
+.banner-image{
+    z-index: -1;
 }
 .primary-button{
     color: #fff;
@@ -298,6 +307,26 @@ a{
 @media screen and (max-width: 688px) {
     .container{
         width: 100%;
+    }
+    .navBar{
+        text-align: center;
+    }
+    .nav-toggler-icon{
+        display: block;
+    }
+    #nav-toggler:checked ~ ul{
+        transform: translateY(20px);
+    }
+    .navBar ul{
+        position: fixed;
+        left: 0;
+        top: 80px;
+        width: 100%;
+        flex-direction: column;
+        padding: 20px;
+        align-items: center;
+        box-shadow: 2.5px 4.33px 30px 0 rgb(64 87 191 / 15%);
+        transform: translateY(-340px);
     }
     .banner, .collection, .feature-product-info{
         grid-template-columns: repeat(1, 1fr);
