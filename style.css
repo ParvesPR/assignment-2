@@ -84,8 +84,23 @@ header{
     font-size: 15px;
     font-weight: 500;
     position: relative;
+    z-index: 1;
 }
-
+.primary-button:before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 0%;
+    width: 100%;
+    background: #5a5252;
+    z-index: -1;
+    border-radius: 50px;
+    transition: all .5s;
+}
+.primary-button:hover:before {
+    height: 100%;
+}
 .primary-button i{
     font-size: 15px;
     margin-left: 5px;
