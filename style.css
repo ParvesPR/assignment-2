@@ -309,7 +309,8 @@ a{
         width: 100%;
     }
     .navBar{
-        text-align: center;
+        flex-direction: row-reverse;
+        justify-content: space-around;
     }
     .nav-toggler-icon{
         display: block;
@@ -324,7 +325,7 @@ a{
         width: 100%;
         flex-direction: column;
         padding: 20px;
-        align-items: center;
+        align-items: flex-start;
         box-shadow: 2.5px 4.33px 30px 0 rgb(64 87 191 / 15%);
         transform: translateY(-340px);
     }
@@ -335,8 +336,58 @@ a{
         text-align: center;
         margin: auto;
     }
+    .banner-content h1{
+        font-size: 24px;
+    }
+    .banner-image img{
+        width: 70%;
+    }
     .banner-content, .feature-product-image{
         order: 2;
+    }
+    .logo{
+      display: flex;
+       flex-wrap: wrap;
+       flex-basis: 25%;
+       border: none;
+    }
+    .feature-product-content{
+        margin-bottom: 15px;
+    }
+  }
+
+  /* FOR TABLET DIVICE */
+  @media screen and (min-width:688px) and (max-width: 992px) {
+    .container{
+        width: 100%;
+    }
+    .navBar{
+        text-align: center;
+    }
+    .nav-toggler-icon{
+        display: block;
+    }
+    #nav-toggler:checked ~ ul{
+        transform: translateY(20px);
+    }
+    .navBar ul{
+        position: fixed;
+        left: 0;
+        top: 80px;
+        width: 100%; 
+        flex-direction: column;
+        padding: 20px;
+        align-items:center;
+        text-align: center;
+        box-shadow: 2.5px 4.33px 30px 0 rgb(64 87 191 / 15%);
+        transform: translateY(-340px);
+     }
+    .banner, .collection, .feature-product-info{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .banner, .banner-content, .primary-button, .feature-product-info{
+        text-align: center;
+        margin: auto;
     }
     .logo{
       display: flex;
